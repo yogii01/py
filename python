@@ -1,14 +1,22 @@
 pipeline {
-  agent any
-  stages {
-    stage('build') {
-      steps {
-        sh 'python hello_World.py'
-      }
+    agent any
+    
+    stages {
+        stage('Python') {
+            steps {
+                bat "main.py"
+            }
+        }
+        stage('Batch') {
+            steps {
+                bat "main.bat"
+            }
+        }
     }
-  }
 }
-  
+        
+            
+    
     
    
    
