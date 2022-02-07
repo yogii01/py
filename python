@@ -1,4 +1,4 @@
-pipeline1 {
+pipeline 1 {
     agent { label 'Slave1' }
     
     stages {
@@ -10,7 +10,7 @@ pipeline1 {
     }
 }
 
-pipeline2 {
+pipeline 2 {
     agent { label 'Slave1' }
     
     stages {
