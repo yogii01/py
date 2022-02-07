@@ -1,5 +1,5 @@
 pipeline 1 {
-    agent { label 'Slave1' }
+    agent { label 'Agent1' }
     
     stages {
         stage('Python') {
@@ -11,7 +11,7 @@ pipeline 1 {
 }
 
 pipeline 2 {
-    agent { label 'Slave1' }
+    agent { label 'Agent1' }
     
     stages {
         stage('Batch') {
