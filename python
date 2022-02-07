@@ -7,23 +7,20 @@ pipeline {
                 bat "main.py"
             }
         }
-    }
-}
+        pipeline 1 {
 
-pipeline 1 {
-    agent { label 'Slave1' }
+            agent { label 'Slave1' }
     
-    stages {
-        stage('Batch') {
-            steps {
-                bat "main.bat"
+            stages {
+                stage('Batch') {
+                    steps {
+                        bat "main.bat"
+                    }
+                }
             }
         }
     }
 }
-
-            
-    
     
    
    
