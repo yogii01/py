@@ -8,28 +8,28 @@ pipeline {
 
         stages {
                                                 
-            stage('Lint & Unit Test') {
+            stage('Python and Batch') {
 
                 parallel {    
 
-                    stage('checkStyle') {
+                    stage('Python') {
 
                         steps {
 
             
-                            sh './gradlew checkStyle'
+                            bat 'main.py'
 
                             }
 
                         }
 
 
-                        stage('Unit Test') {
+                        stage('Batch') {
 
                             steps {
 
            
-                                sh './gradlew testStagingDebug'
+                                bat 'main.bat'
 
                                 }
                             }
