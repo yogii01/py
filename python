@@ -1,5 +1,5 @@
-pipeline {
-    agent any
+pipeline1 {
+    agent { label 'Slave1' }
     
     stages {
         stage('Python') {
@@ -7,6 +7,13 @@ pipeline {
                 bat "main.py"
             }
         }
+    }
+}
+
+pipeline2 {
+    agent { label 'Slave1' }
+    
+    stages {
         stage('Batch') {
             steps {
                 bat "main.bat"
@@ -14,7 +21,7 @@ pipeline {
         }
     }
 }
-        
+
             
     
     
